@@ -1,0 +1,22 @@
+<h1>List of all trips</h1>
+
+{{#each trips}}
+
+<div class="trips-card">
+
+<h2>Name: {{name}}</h2>
+
+<p>Description: {{description}}</p>
+
+<img class="trip-img" src="{{imageUrl}}" alt="{{name}}" />
+
+<h4>Participants: </h4>
+    {{#each participants}}
+        {{username}}
+    {{/each}}
+<br>
+<br>
+<a href="/private/trips/{{_id}}">Trip details</a>
+</div>
+
+{{/each}}
